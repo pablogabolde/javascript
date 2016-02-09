@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>TP Horloge</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+
+  <body>
+
+    <div id="blocGeneral">
+        <h1 id="date"> </h1>
+
+        <table>
+            <form>
+                <tr> 
+                    <td> <input type="checkbox" name="active"/> </td>
+                    <td> <input class="inputNombre" type ="number" min="0" max="23" name="heure"/> </td>
+                    <td> <input class="inputNombre" type ="number" min="0" max="59" name="minute"/> </td>
+                    <td> <input type="text" name="msg"/> </td>
+                    <td> 
+                        <select name="sound"> 
+                            <option value="sound1"> sound1 </option>
+                            <option value="sound2"> sound2 </option>
+                            <option value="sound3"> sound3 </option>
+                        </select>
+                    </td>
+                    <td> <button name="supprimer"> X </button> </td>
+                </tr>
+                <tr>
+                    <td> <button id="boutonAjouter" name="ajouter"> + </button> </td>
+                </tr>
+            </form>
+        </table>
+    </div>
+
+    <script type="text/javascript" src="javascript.js"></script>
+  </body>
+</html>
