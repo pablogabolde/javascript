@@ -17,6 +17,15 @@ window.addEventListener("load", function (){
   var mdp2Ok = false;
   var CGUOK = false;
 
+  function testToutOk(){
+    if(ageOk && idOk && mdpOk && mdp2Ok && CGUOK){
+      bouton.disabled = false;
+    }
+    else{
+      bouton.disabled = true;
+    }
+  }
+
   //On test l'âge
   age.addEventListener("change", function test(){
     //Si il n'est pas majeur ou l'age est nul
@@ -40,10 +49,8 @@ window.addEventListener("load", function (){
       ageOk = true;
     }
     
+    
   });
-
-  //La variable est toujours false....
-  console.log(ageOk);
   
 
   //On test l'ID
@@ -55,6 +62,7 @@ window.addEventListener("load", function (){
       }
       id.classList.add("erreur");
       tabDivVerif[1].style.display = "inline";
+      idOk = false;
     }
     else{
        //On test si il y a la classe erreur si oui on l'enlève
@@ -65,6 +73,7 @@ window.addEventListener("load", function (){
       id.classList.add("bien");
       idOk = true;
     }
+    testToutOk();
   });
 
   //On test mdp suffisamment fort
@@ -97,6 +106,7 @@ window.addEventListener("load", function (){
       }
       mdp.classList.add("erreur");
       tabDivVerif[2].style.display = "inline";
+      mdpOk = false;
     }
     else{
       if(mdp.classList.contains("erreur")){ 
@@ -106,6 +116,7 @@ window.addEventListener("load", function (){
       mdp.classList.add("bien");
       mdpOk = true;
     }
+    testToutOk();
     
     pourcentage.textContent = pourcentageMdp + "%";
   });
@@ -121,6 +132,7 @@ window.addEventListener("load", function (){
       }
       mdp2.classList.add("erreur");
       tabDivVerif[3].style.display = "inline";
+      mdp2Ok = false;
     }
     else{
        //On test si il y a la classe erreur si oui on l'enlève
@@ -131,6 +143,7 @@ window.addEventListener("load", function (){
       mdp2.classList.add("bien");
       mdp2Ok = true;
     }
+    testToutOk();
   });
 
   //On test les CGU
@@ -138,20 +151,14 @@ window.addEventListener("load", function (){
     //Si elle n'est cochée
     if(!CGU.checked){
       tabDivVerif[4].style.display = "inline";
+      CGUOK = false;
     }
     else{
         tabDivVerif[4].style.display = "none";
         CGUOK = true;
     }
+    testToutOk();
   });
 
-  //Cela ne marche pas il y a un problème lorsque l'on essaie de changer la valeur de ageOk (cf ligne 46),
-  // les autres ne marchent pas non plus
-  if(ageOk === true){
-    bouton.disabled = false;
-  }
-  else{
-    bouton.disabled = true;
-  }
   
 });
