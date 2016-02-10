@@ -2,3 +2,8 @@
 body{background: url("image/horloge.jpg") no-repeat; background-size: 100%;}
 h1{color: white; text-align: center;}
 #blocGeneral{margin:15% auto; background-color: rgba(0,0,0,0.6); width: 500px; border-radius: 15px; padding: 20px;}
+#listeAlarme {
+    text-align: center;
+}
+
+

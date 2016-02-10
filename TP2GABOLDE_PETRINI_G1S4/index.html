@@ -13,25 +13,24 @@
         <h1 id="date"> </h1>
 
         <table>
-            <form>
-                <tr> 
-                    <td> <input type="checkbox" name="active"/> </td>
-                    <td> <input class="inputNombre" type ="number" min="0" max="23" name="heure"/> </td>
-                    <td> <input class="inputNombre" type ="number" min="0" max="59" name="minute"/> </td>
-                    <td> <input type="text" name="msg"/> </td>
-                    <td> 
+            
+                <div id="listeAlarme"/>
+                    <div id="modeleAlarme"> 
+                        <input type="checkbox" name= "active"/>
+                        <input class="inputNombre" type = "number" min="0" max="23" name="heure"/>
+                        <input class="inputNombre" type = "number" min="0" max="59" name="minute"/>
+                        <input type="text" name="msg"/>
                         <select name="sound"> 
                             <option value="sound1"> sound1 </option>
                             <option value="sound2"> sound2 </option>
                             <option value="sound3"> sound3 </option>
                         </select>
-                    </td>
-                    <td> <button name="supprimer"> X </button> </td>
-                </tr>
-                <tr>
-                    <td> <button id="boutonAjouter" name="ajouter"> + </button> </td>
-                </tr>
-            </form>
+                        <button id="boutonSuppr" name="supprimer"> X </button>
+                    </div>    
+                </div>
+            
+                <button id="boutonAjouter" name="ajouter"> + </button>
+            
         </table>
     </div>
 
