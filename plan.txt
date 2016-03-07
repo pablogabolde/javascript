@@ -1,0 +1,21 @@
+Choisissez un framework parmi ceux énumérés ci-avant
+Analysez ses point forts/points faibles
+
+
+WARNING : 
+Ne pas reprendre des points forts/points faibles inhérents à Javascript !! Trouvez des arguments spécifiques au framework étudié
+
+Points "classiques" : syntaxe, performance, taille, élégance/lisibilité
+Compte-rendu oral, 5 slides max., 5 minutes, noté (/5 points) en début prochain cours
+
+1/Intro 
+	a) Date, open source..compact......
+	b) Personnalisable (téléchargement)
+	c) modulaire...
+2/ Modules intégrés 
+	a) tableaux
+	b) classes
+3/ Orienté objet
+4/ Syntaxe
+5/ Avantages - Inconv
+ ouverture : Then promise.... 
